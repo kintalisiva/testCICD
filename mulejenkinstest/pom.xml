@@ -94,7 +94,7 @@
 				 <configuration>
 					<deploymentType>standalone</deploymentType>
 					<muleVersion>${mule.version}</muleVersion> 
-					<muleHome>file:\\C:\Users\skintali\Desktop\mule-standalone-3.8.1\</muleHome> 
+					<muleHome>C:\Users\skintali\Desktop\mule-standalone-3.8.1\bin</muleHome> 
 					<applicationName>${artifactId}</applicationName> 
 					<community>comunity</community> 
 				</configuration>
