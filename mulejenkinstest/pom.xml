@@ -79,9 +79,9 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.0</version>
-				<configuration>
+				<!-- <configuration>
 					<deploymentType>cloudhub</deploymentType>
-					<muleVersion>3.8.7</muleVersion>
+					<muleVersion>3.5.4</muleVersion>
 					<username>skintali1</username>
 					<password>Siva@123</password>
 					<applicationName>mulejenkinstest</applicationName>
@@ -90,7 +90,15 @@
 					<uri>https://anypoint.mulesoft.com</uri>
 					<workerType>Micro</workerType>
 				</configuration>
-				<executions>
+				 -->
+				 <configuration>
+					<deploymentType>standalone</deploymentType>
+					<muleVersion>${mule.version}</muleVersion> 
+					<muleHome>C:\Users\skintali\Desktop\mule-standalone-3.8.1\</muleHome> 
+					<applicationName>${artifactId}</applicationName> 
+					<community>comunity</community> 
+				</configuration>
+				 <executions>
 					<execution>
 						<id>deploy</id>
 						<phase>deploy</phase>
