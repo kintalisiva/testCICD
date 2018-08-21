@@ -91,12 +91,9 @@
 					<workerType>Micro</workerType>
 				</configuration>
 				 -->
+				 <extensions>true</extensions>
 				 <configuration>
-					<deploymentType>standalone</deploymentType>
-					<muleVersion>${mule.version}</muleVersion> 
-					<muleHome>C:\Users\skintali\Desktop\mule-standalone-3.8.1\bin</muleHome> 
-					<applicationName>${artifactId}</applicationName> 
-					<community>comunity</community> 
+					<copyToAppsDirectory>true</copyToAppsDirectory> 
 				</configuration>
 				 <executions>
 					<execution>
