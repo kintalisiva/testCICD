@@ -89,8 +89,8 @@
 				</configuration>
 				 -->
 				    <plugin>
-                        <groupId>org.mule.tools.maven</groupId>
-                        <artifactId>mule-app-maven-plugin</artifactId>
+                        <groupId>org.mule.tools</groupId>
+                        <artifactId>maven-mule-plugin</artifactId>
                         <version>${mule.tools.version}</version>
                         <extensions>true</extensions>
                         <configuration>
