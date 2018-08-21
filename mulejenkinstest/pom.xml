@@ -93,7 +93,7 @@
 				 -->
 				 <extensions>true</extensions>
 				 <configuration>
-				 <muleHome>C:\Users\skintali\Desktop\mule-standalone-3.8.1</muleHome> 
+					<muleHome>C:\Users\skintali\Desktop\mule-standalone-3.8.1</muleHome> 
 					<copyToAppsDirectory>true</copyToAppsDirectory> 
 				</configuration>
 				 <executions>
