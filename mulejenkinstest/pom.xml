@@ -88,10 +88,47 @@
 					<workerType>Micro</workerType>
 				</configuration>
 				 -->
-				    <plugin>
+				 <plugin>
+					     <groupId>org.mule.tools.maven</groupId>
+					     <artifactId>mule-app-maven-plugin</artifactId>
+					     <version>${mule.tools.version}</version>
+					     <extensions>true</extensions>
+					     <configuration>
+					         <copyToAppsDirectory>false</copyToAppsDirectory>
+					     </configuration>
+  					</plugin>
+  					<plugin>
+					   <groupId>org.apache.maven.plugins</groupId>
+					   <artifactId>maven-dependency-plugin</artifactId>
+					   <version>2.10</version>
+					   <executions>
+					      <execution>
+					         <id>copy</id>
+					         <phase>deploy</phase>
+					         <goals>
+					            <goal>copy</goal>
+					         </goals>
+					         <configuration>
+					             <artifactItems>
+					                  <artifactItem>
+					                     <groupId>com.mycompany</groupId>
+					                     <artifactId>order-system</artifactId>
+					                     <version>1.0.0-SNAPSHOT</version>
+					                     <type>zip</type>
+					                     <overWrite>false</overWrite>
+					                     <outputDirectory>C:/Users/skintali/Desktop/mule-standalone-3.8.1/apps</outputDirectory>
+					                     <destFileName>order-system-1.0.0-SNAPSHOT.zip</destFileName>
+					                   </artifactItem>
+					              </artifactItems>
+					              <overWriteReleases>false</overWriteReleases>
+					              <overWriteSnapshots>true</overWriteSnapshots>
+					         </configuration>
+					      </execution>
+					  </executions>
+					</plugin>
+				   <!-- <plugin>
                         <groupId>org.mule.tools.maven</groupId>
                         <artifactId>mule-maven-plugin</artifactId>
-                          <version>2.2.1</version>
                         <extensions>true</extensions>
                         <configuration>
                             <copyToAppsDirectory>true</copyToAppsDirectory>
@@ -105,14 +142,13 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> 
 			<plugin>
 			    <groupId>org.mule.tools.maven</groupId>
 			    <artifactId>mule-maven-plugin</artifactId>
-			    <version>2.2.1</version>
 			    <configuration>
 			        <deploymentType>standalone</deploymentType>
-			        <muleVersion>3.8.5</muleVersion>
+			        <muleVersion>3.8.1</muleVersion>
 			    </configuration>
 			    <executions>
 			        <execution>
@@ -123,7 +159,7 @@
 			            </goals>
 			        </execution>
 			    </executions>
-			</plugin>
+			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
