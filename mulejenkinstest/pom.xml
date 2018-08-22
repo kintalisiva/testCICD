@@ -90,7 +90,7 @@
 				 -->
 				    <plugin>
                         <groupId>org.mule.tools.maven</groupId>
-                        <artifactId>mule-app-maven-plugin</artifactId>
+                        <artifactId>mule-maven-plugin</artifactId>
                         <extensions>true</extensions>
                         <configuration>
                             <copyToAppsDirectory>true</copyToAppsDirectory>
