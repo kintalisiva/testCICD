@@ -91,6 +91,7 @@
 				    <plugin>
                         <groupId>org.mule.tools.maven</groupId>
                         <artifactId>mule-maven-plugin</artifactId>
+                          <version>2.2.1</version>
                         <extensions>true</extensions>
                         <configuration>
                             <copyToAppsDirectory>true</copyToAppsDirectory>
@@ -106,34 +107,23 @@
 				</executions>
 			</plugin>
 			<plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.10</version>
-                    <executions>
-                        <execution>
-                            <id>copy</id>
-                            <phase>deploy</phase>
-                            <goals>
-                                <goal>copy</goal>
-                            </goals>
-                            <configuration>
-                                <artifactItems>
-                                    <artifactItem>
-                                        <groupId>com.mule.support.ba</groupId>
-                                        <artifactId>bonmarche-case-00145615</artifactId>
-                                        <version>1.0.0</version>
-                                        <type>zip</type>
-                                        <overWrite>false</overWrite>
-                                        <outputDirectory>C:/Users/skintali/Desktop/mule-standalone-3.8.1/apps</outputDirectory>
-                                        <destFileName>bonmarche-case.zip</destFileName>
-                                    </artifactItem>
-                                </artifactItems>
-                                <overWriteReleases>false</overWriteReleases>
-                                <overWriteSnapshots>true</overWriteSnapshots>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
+			    <groupId>org.mule.tools.maven</groupId>
+			    <artifactId>mule-maven-plugin</artifactId>
+			    <version>2.2.1</version>
+			    <configuration>
+			        <deploymentType>standalone</deploymentType>
+			        <muleVersion>3.8.5</muleVersion>
+			    </configuration>
+			    <executions>
+			        <execution>
+			            <id>deploy</id>
+			            <phase>deploy</phase>
+			            <goals>
+			                <goal>deploy</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
