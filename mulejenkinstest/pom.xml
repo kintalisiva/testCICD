@@ -97,34 +97,26 @@
 					         <copyToAppsDirectory>false</copyToAppsDirectory>
 					     </configuration>
   					</plugin>
-  					<plugin>
-					   <groupId>org.apache.maven.plugins</groupId>
-					   <artifactId>maven-dependency-plugin</artifactId>
-					   <version>2.10</version>
-					   <executions>
-					      <execution>
-					         <id>copy</id>
-					         <phase>deploy</phase>
-					         <goals>
-					            <goal>copy</goal>
-					         </goals>
-					         <configuration>
-					             <artifactItems>
-					                  <artifactItem>
-					                     <groupId>com.mycompany</groupId>
-					                     <artifactId>mulejenkinstest</artifactId>
-					                     <type>zip</type>
-					                     <overWrite>false</overWrite>
-					                     <outputDirectory>C:/Users/skintali/Desktop/mule-standalone-3.8.1/apps</outputDirectory>
-					                     <destFileName>mulejenkinstest.zip</destFileName>
-					                   </artifactItem>
-					              </artifactItems>
-					              <overWriteReleases>false</overWriteReleases>
-					              <overWriteSnapshots>true</overWriteSnapshots>
-					         </configuration>
-					      </execution>
-					  </executions>
-					</plugin>
+  					 <plugin>
+						 <groupId>org.mule.tools.maven</groupId>
+						 <artifactId>mule-maven-plugin</artifactId>
+						 <configuration>
+						 <deploymentType>standalone</deploymentType>
+						 <muleVersion>${mule.version}</muleVersion> 
+						 <muleHome>${mule.home}</muleHome> 
+						 <applicationName>${artifactId}</applicationName> 
+						 <community>${mule.runtime.community}</community> 
+						 </configuration>
+						 <executions>
+						 <execution>
+						 <id>deploy</id>
+						 <phase>deploy</phase>
+						 <goals>
+						 <goal>deploy</goal>
+						 </goals>
+						 </execution>
+						 </executions>
+ 					</plugin>
 				   <!-- <plugin>
                         <groupId>org.mule.tools.maven</groupId>
                         <artifactId>mule-maven-plugin</artifactId>
