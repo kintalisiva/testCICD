@@ -90,7 +90,7 @@
 				     <version>${mule.tools.version}</version>
 				     <extensions>true</extensions>
 				     <configuration>
-				         <copyToAppsDirectory>false</copyToAppsDirectory>
+				         <copyToAppsDirectory>true</copyToAppsDirectory>
 				      </configuration>
   				</plugin>
   				
@@ -110,11 +110,10 @@
 					                  <artifactItem>
 					                     <groupId>com.mycompany</groupId>
 					                     <artifactId>order-system</artifactId>
-					                     <version>1.0.0-SNAPSHOT</version>
 					                     <type>zip</type>
 					                     <overWrite>false</overWrite>
 					                     <outputDirectory>C:/Users/skintali/Desktop/mule-standalone-3.8.1/apps</outputDirectory>
-					                     <destFileName>order-system-1.0.0-SNAPSHOT.zip</destFileName>
+					                     <destFileName>mulejenkinstest.zip</destFileName>
 					                   </artifactItem>
 					              </artifactItems>
 					              <overWriteReleases>false</overWriteReleases>
