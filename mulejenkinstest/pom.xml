@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
-		<mule.home>C:/Users/skintali/Desktop/mule-standalone-3.8.1/opt/mule</mule.home>
+		<mule.home>C:/Users/skintali/Desktop/mule-standalone-3.8.1/</mule.home>
 		<mule.version>3.8.1</mule.version>
 		<mule.tools.version>1.2</mule.tools.version>
 	</properties>
