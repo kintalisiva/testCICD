@@ -97,7 +97,7 @@
   				
   				<plugin>
 				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
+				<artifactId>mule-app-maven-plugin</artifactId>
 				<configuration>
 					<copyToDomainsDirectory>true</copyToDomainsDirectory>
 				</configuration>
