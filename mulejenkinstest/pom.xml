@@ -100,6 +100,7 @@
 				<artifactId>mule-app-maven-plugin</artifactId>
 				<configuration>
 					<copyToDomainsDirectory>true</copyToDomainsDirectory>
+					<muleHome>C:\Users\skintali\Desktop\mule-standalone-3.8.1\bin</muleHome>
 				</configuration>
 				<executions>
 					<execution>
