@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
-		<mule.home>C:/Users/skintali/Desktop/mule-standalone-3.8.1</mule.home>
+		<mule.home>C:/Users/skintali/Desktop/opt/mule</mule.home>
 		<mule.version>3.8.1</mule.version>
 		<mule.tools.version>1.2</mule.tools.version>
 	</properties>
@@ -22,7 +22,7 @@
 		<plugins>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-app-maven-plugin</artifactId>
+				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.2.1</version>
 			</plugin>
 			<plugin>
@@ -92,7 +92,7 @@
 				     <extensions>true</extensions>
 				     <configuration>
 				         <copyToAppsDirectory>true</copyToAppsDirectory>
-				         <muleHome>${mule.home}</muleHome>
+				         <applicationName>${artifactId}</applicationName> 
 				      </configuration>
 				 </plugin> 
   				
