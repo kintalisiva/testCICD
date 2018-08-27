@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
-		<mule.home>C:/Users/skintali/Desktop/mule-standalone-3.8.1/</mule.home>
+		<mule.home>C:/Users/skintali/Desktop/mule-standalone-3.8.1</mule.home>
 		<mule.version>3.8.1</mule.version>
 		<mule.tools.version>1.2</mule.tools.version>
 	</properties>
@@ -85,23 +85,28 @@
 					<workerType>Micro</workerType>
 				</configuration>
 				 -->
-				<plugin>
+				 <plugin>
 				     <groupId>org.mule.tools.maven</groupId>
 				     <artifactId>mule-app-maven-plugin</artifactId>
 				     <version>${mule.tools.version}</version>
 				     <extensions>true</extensions>
 				     <configuration>
-				         <copyToAppsDirectory>false</copyToAppsDirectory>
+				         <copyToAppsDirectory>true</copyToAppsDirectory>
+				         <muleHome>${mule.home}</muleHome>
 				      </configuration>
-  				</plugin>
+				 </plugin> 
   				
-  				<plugin>
+  				<!-- <plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
 				<configuration>
 					<copyToDomainsDirectory>true</copyToDomainsDirectory>
 					<muleHome>C:\Users\skintali\Desktop\mule-standalone-3.8.1\bin</muleHome>
 				</configuration>
+				 <configuration>
+				         <copyToAppsDirectory>true</copyToAppsDirectory>
+				         <muleHome>${mule.home}</muleHome>
+				      </configuration>
 				<executions>
 					<execution>
 						<id>deploy</id>
@@ -111,7 +116,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 					<plugin>
 					    <groupId>org.apache.maven.plugins</groupId>
 					    <artifactId>maven-deploy-plugin</artifactId>
